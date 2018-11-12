@@ -19,10 +19,20 @@ The game is based on the idea of treasure hunt using the Google Map API.  The ta
 * Google Maps Drawing Layer
 
 ## Rough Breakdown of Tasks
-* Angel Garcia - pushing/pulling data from firebase.
-* Bryant Gossett - front-end
-* Kenneth Chung - Game Logic
-* Marsha Leconte - Google maps API
+* Game logic (flow) - Kenneth
+This concerns the progression of the game through its various states. The app will recognize when the user logs in, initiate the game, handle the user's input (determine whether the user won or lost and respond accordingly), and proceed to subsequent rounds. Developing the game involves working with variables that will be used by the other components of the app (e.g. recording a win updates a display on the front end and a property value in Firebase). 
+
+
+* Front end (UI) - Bryant
+This concerns the layout, styling, and interactivity of the Web page. The page will feature an interactive map for the user to hover over/click. The app will also accept textual input (e.g. the user's login information), display game data (e.g. wins/losses, previous rounds' outcomes and locations), and feature message sections that update to reflect the state of the game (e.g. "ready to play", "time's up!"). 
+
+
+* API handling - Marsha
+We will enlist the Google Maps API's capability to calculate distances between points on a map and query its information about landmarks. Using the API will entail recording user guesses and calculating the distance from the guessed point to the hidden location. We will also use landmark data to provide clues for the user (identifying landmarks that are within a given distance from the hidden location). 
+
+
+* Firebase handling - Angel
+The Firebase realtime database will track user logins (connections), maintain data about the users (name, wins, losses), and store records of previously-played games. We are still contemplating the persistence lifetimes of these data; for example, wins/losses should persist at least through the session, but we could configure the app to remember users across sessions, allowing them to sign in and continue building their win/loss totals. 
 
 # Project Requirements
 * Must use at least two APIs
