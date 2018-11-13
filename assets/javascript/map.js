@@ -47,7 +47,6 @@
        ]         
         var origin = {};
 
-        console.log(location);
 
          for(var i = 0; i<location.length; i++){
             origin.lat = location[i].lat;
