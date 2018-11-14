@@ -50,7 +50,8 @@ ClickEventHandler.prototype.handleClick = function (event) {
   if (event.placeId) {
 
     if (event.placeId === this.origin.id) {
-      alert('You are Correct This is :' + this.origin.site);
+      //alert('You are Correct This is :' + this.origin.site);
+      $('#modal2').modal('open');
     }
     // Calling e.stop() on the event prevents the default info window from
     // showing.
