@@ -1,5 +1,17 @@
 var roundNumber = 1;
 $(document).ready(function () {
+
+    var database = firebase.database();
+    var gameStats = database.ref("/stats");
+
+    gameStats.on("value", function(childSnapshot) {
+        // Store everything into a variable.
+        $("#win").text(childSnapshot.val().wins);
+        $("#losses").text(childSnapshot.val().losses);
+        $("#best").text(childSnapshot.val().best);
+    
+    });
+
     $('#modal1').modal({
         dismissible: false,
         onCloseEnd: function () { timer.run() }
@@ -52,3 +64,4 @@ function modalNextRound(){
     $('#modal-btn').text('Next Round');
     $('#modal1').modal('open');
 };
+

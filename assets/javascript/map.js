@@ -1,5 +1,15 @@
 
 //Where should this be defined? capture in db
+var database = firebase.database();
+var locations = database.ref("/locations");
+
+var locObject=[]
+
+locations.on("child_added", function(loc){
+  locObject.push(loc.val())
+  console.log(locObject)
+})
+
 var win = 0; 
 
 function MapPoint(lat, lng, id, site, clues){
