@@ -66,11 +66,11 @@
                     <li class="collection-header">
                         <h6><strong>Clues</strong></h6>
                     </li>
+                    <li class="collection-item">Clue 1: it is somewhere on the map</li>
                     <li id="clueOne" class="collection-item">Clue 1: it is somewhere on the map</li>
                     <li id="clueTwo" class="collection-item">Clue 2: it is somewhere on the map</li>
                     <li id="clueThree" class="collection-item">Clue 3: it is somewhere on the map</li>
-                    <li id="clueFour" class="collection-item">Clue 4: it is somewhere on the map</li>
-                    <li id="clueFive" class="collection-item">Clue 5: it is somewhere on the map</li>
+                    <li class="collection-item">Live Clue: <span id='liveClue'></span></li>
                 </ul>
             </div>
             <div class="col s8 m8 l8 map-height">
@@ -95,7 +95,7 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>3</td>
+                                            <td id='win'>0</td>
                                             <td>2</td>
                                             <td>56</td>
                                         </tr>
@@ -111,8 +111,10 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAGBxD7ehhnDQY_7b7l30Spt5l4F8EQf4&libraries=places&callback=initMap"
+    <!--added geometry library to link-ML-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAGBxD7ehhnDQY_7b7l30Spt5l4F8EQf4&libraries=places&callback=initMap&libraries=geometry"
         async defer></script>
+        
 </body>
 
 </html>
