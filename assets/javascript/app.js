@@ -40,7 +40,7 @@ var timer = {
 function modalNextRound(){
     roundNumber++;
     $("#roundNumber").text(roundNumber);
-    timer.startNumber = 10000;
+    timer.startNumber = 120000;
     $("#timerNum").text(moment(timer.startNumber).format('m:ss'));
     var roundCompleted = $('<p>');
     var instructions = $('<p>');
