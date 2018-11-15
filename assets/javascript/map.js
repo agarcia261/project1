@@ -77,8 +77,7 @@ ClickEventHandler.prototype.handleClick = function(event){
         content: '<div align ="center">  Good Job!' + '<br>' + 'The Treasure Was Hidden In the' + '<br>' + this.origin.site  +'</div>'
       });
       infowindow.open(map, marker);
-      $('#liveClue').html('You Got It!!!');
-
+     
       // Where should this be defined? capture in db
       win++; 
       $('#win').html(win);
@@ -86,8 +85,8 @@ ClickEventHandler.prototype.handleClick = function(event){
     else{
           var distance = google.maps.geometry.spherical.computeDistanceBetween(event.latLng, target);
           distance= Math.round(distance);
-          $('#liveClue').html('You Are ' + distance + ' Meters Away');
-          console.log(event.latLng);
+          $('#distance').html('You are ' + distance + ' Meters Away');
+         
     }
     // Calling e.stop() on the event prevents the default info window from
     event.stop();
