@@ -14,7 +14,7 @@ $(document).ready(function () {
 });
 
 var timer = {
-    startNumber: 10000,
+    startNumber: 120000,
     intervalId: '',
     run: function () {
         clearInterval(this.intervalId);
